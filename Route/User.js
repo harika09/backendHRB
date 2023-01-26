@@ -42,7 +42,7 @@ router.post('/register', (req, res)=>{
                 }else if (exist.userName=== userName.toLowerCase()){
                     res.json({error: 'Username Already Registered'})
                 }else if(exist.ip === ip){
-                    res.json({error: 'User with same IP address already registered'})
+                    res.json({error: 'User with the same IP address was already registered'})
                 }
             }else{
                  /* encrypt password */
@@ -156,7 +156,7 @@ router.post('/bind-key', auth, (req,res)=>{
                                 if(exist){
                                     console.log('License removed')
                                 }else{
-                                    console.log('Invalid License')
+                                    console.log('Invalid user License')
                                 }
                             })
                         }
