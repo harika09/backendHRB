@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 
 
+
 require('dotenv').config()
 const app = express()
 
@@ -33,7 +34,7 @@ mongoose.connect(
     } else {
       app.listen(port, () => {
         console.log(
-          "Sever is running at " + port + " and connected to the database"
+          "Sever is running at " + port + " and connected to the database" 
         );
       });
     }
